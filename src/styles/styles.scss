@@ -1,0 +1,31 @@
+
+@import "fontello";
+@import "fontello-codes";
+
+@import "colors";
+@import "reveal_override";
+
+
+// Inside .reveal to override theme defaults
+.reveal, *:not(.reveal) {
+  
+
+  @import "modules/text";
+  @import "modules/browser";
+  @import "modules/css_awesome";
+  @import "modules/position";
+
+  @import "examples/btn";
+  @import "examples/card";
+}
+@import "examples/card";
+
+.margin-center {
+  margin: 0 auto;
+}
+
+
+body {
+  background: #F5F5F5;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}

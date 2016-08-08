@@ -1,0 +1,108 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Reveal.JS required styles -->
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/theme/white.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="reveal.js/lib/css/color-brewer.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <title>What NOT to do in CSS</title>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Intro -->
+      {% include 'slide-1.njk' %}
+      {% include 'slide-sergio.njk' %}
+
+      {% include 'slide-css-1.njk' %}
+      {% include 'slide-css-1b.njk' %}
+      {% include 'slide-css-1c.njk' %}
+      {% include 'demo-sites.njk' %}
+      {% include 'slide-css-2.njk' %}
+      {% include 'slide-css-3.njk' %}
+      {% include 'slide-css-4.njk' %}
+      {% include 'slide-css-5.njk' %}
+
+      {% include 'slide-communication-1.njk' %}
+      {% include 'slide-communication-3.njk' %}
+      {% include 'slide-communication-2.njk' %}
+      {% include 'slide-communication-5.njk' %}
+      {% include 'slide-communication-4.njk' %}
+
+      {% include 'slide-dynamic-1.njk' %}
+      {% include 'slide-dynamic-2.njk' %}
+      {% include 'slide-dynamic-4.njk' %}
+      {% include 'slide-dynamic-3.njk' %}
+      
+      {% include 'slide-structure-1.njk' %}
+      {% include 'slide-structure-module-example.njk' %}
+      {% include 'slide-structure-2.njk' %}
+
+      {% include 'slide-rule-1.njk' %}
+      {% include 'slide-structure-3.njk' %}
+      {% include 'slide-structure-3b.njk' %}
+      {% include 'slide-structure-3c.njk' %}
+      {% include 'slide-structure-5.njk' %}
+
+      {% include 'slide-rule-2.njk' %}
+      {% include 'slide-rule-4.njk' %}
+      {% include 'slide-rule-3.njk' %}
+      
+      {% include 'slide-structure-6.njk' %}
+      {% include 'slide-structure-8.njk' %}
+
+
+      
+      {% include 'slide-structure-5a.njk' %}
+      {% include 'slide-structure-5b.njk' %}
+      {% include 'slide-structure-5c.njk' %}
+
+      {% include 'slide-qa-1.njk' %}
+      {% include 'slide-qa-2.njk' %}
+      
+      {% include 'slide-awesome.njk' %}
+      {% include 'slide-awesome-2.njk' %}
+
+      {% include 'slide-out.njk' %}
+    </div>
+  </div>
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      history: true,
+      controls: false,
+      width: 1440,
+      height: 900,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: 'reveal.js/plugin/markdown/marked.js' },
+        { src: 'reveal.js/plugin/markdown/markdown.js' },
+        { src: 'reveal.js/plugin/notes/notes.js', async: true },
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'js/plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }}
+      ]
+    });
+  </script>
+  </body>
+  </html>

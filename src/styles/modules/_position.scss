@@ -1,0 +1,25 @@
+.side-by-side {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  & > * {
+    width: 46%;
+    margin: 0 2%;
+    float: left;
+  }
+}
+
+.margin-top {
+  margin-top: 40px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 92%;
+}

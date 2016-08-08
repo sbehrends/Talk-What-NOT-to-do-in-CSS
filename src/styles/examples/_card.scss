@@ -1,0 +1,68 @@
+/* 
+ Card Demo
+ Adapted from: http://bootsnipp.com/snippets/featured/material-cards
+ */
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+  // max-width: 600px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-bottom: 40px;
+
+  .related & {
+    .card-content {
+      display: none;
+    }
+  }
+}
+.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  max-height: 300px;
+}
+.card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  box-shadow: none;
+  margin: 0;
+  border: 0;
+  max-width: 100%;
+}
+.card-image .card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 38px 16px 16px;
+  width: 100%;
+  text-align: left;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+.card-content {
+  padding: 16px;
+  font-size: 18px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  background: #FFF;
+  text-align: left;
+  p {
+    margin: 0;
+    color: inherit;
+  }
+  .card-title {
+    line-height: 48px;
+  }
+}

@@ -1,0 +1,42 @@
+<section
+  data-transition="slide">
+
+  <!-- <div class="margin-center text-center">
+    <button class="btn btn-purple" href="#" target="_blank">I'm a Button</button>
+  </div> -->
+
+  <h5 class="h3">styles.scss</h5>
+  <pre>
+    <code class="language-scss no-height h3" data-trim data-noescape>
+@import "vars";
+@import "btn";
+    </code>
+  </pre>
+
+  <h5 class="h3">_vars.scss</h5>
+  <pre>
+    <code class="language-scss no-height h3" data-trim data-noescape>
+$purple: #503EEF;
+$btn-size: 40px;
+    </code>
+  </pre>
+
+  <h5 class="h3">_btn.scss</h5>
+  <pre>
+    <code class="language-scss no-height h3" data-trim data-noescape>
+.btn {
+  font-size: $btn-size/2;
+  border-radius: $btn-size;
+  line-height: $btn-size;
+  &.btn-purple {
+    border: 3px solid $purple;
+    color: $purple;
+  }
+}
+    </code>
+  </pre>
+
+  <aside class="notes">
+
+  </aside>
+</section>
