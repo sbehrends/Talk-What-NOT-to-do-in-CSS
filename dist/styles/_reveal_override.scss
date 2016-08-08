@@ -1,0 +1,51 @@
+.reveal {
+  pre {
+    box-shadow: none;
+
+    code {
+      padding: 20px;
+      &.no-height {
+        max-height: inherit;
+      }
+      &:focus {
+        outline: none;
+      }
+
+    }
+  }
+  .progress span {
+    background: $purple;
+  }
+
+  section {
+    img {
+      &.no-shadow {
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+
+  .slides {
+    section.vertical-align-top {
+      bottom: 0 !important;
+    }
+  }
+}
+
+.highlight-block,
+.highlight-inline {
+    background:yellow;
+    color:black;
+}
+
+.highlight-block span,
+.highlight-inline span {
+    background:none !important;
+    color:inherit !important;
+}
+
+.highlight-block {
+    display:inline-block;
+    width:100%;
+}

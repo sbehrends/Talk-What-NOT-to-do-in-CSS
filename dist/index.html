@@ -1,0 +1,764 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Reveal.JS required styles -->
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/theme/white.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="reveal.js/lib/css/color-brewer.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <title>What NOT to do in CSS</title>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Intro -->
+      <section
+  data-background-color="#CD1203"
+  data-transition="fade-out">
+  <h1 class="h0 text-uppercase">What <span class="text-block c-red">NOT</span> to do in <span class="text-block c-red">CSS</span></h1>
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-transition="fade"
+  data-background-image="images/sergio-profile.jpg"
+  data-background-position="bottom left"
+  data-background-size="32% auto"
+  data-background-color="#fff">
+  <h2 class="h1">Sergio Behrends</h2>
+  <p class="h2 text-bold">VPE @ <span class="c-orange">Aerolab <i class="icon-aerolab"></i></span></p>
+  <p class="h3"><i class="icon-twitter"></i>@Blunk <i class="icon-github"></i>sbehrends</p>
+  <p class="h3 text-bold">#cssconfar</p>
+
+  <aside class="notes">
+    Who I am?
+  </aside>
+</section>
+
+      <section
+  data-background-color="#503EEF"
+  data-transition="fade-out">
+  <h1 class="h-1 text-uppercase">CSS</h1>
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-background-color="#503EEF"
+  data-transition="fade-out">
+  <h4 class="h2">1994 Proposal</h4>
+  <pre>
+    <code class="language-css h2" data-trim data-noescape>
+window.foreground = black
+font.family = times
+font.size = 12pt # alternative units are px, mm, cm
+font.slant = normal
+font.weight = normal
+
+h1.font.size = font.size * 3
+h2.font.size = font.size * 2.5
+h3.font.size = font.size * 2
+    </code>
+  </pre>
+  <p>Håkon W Lie</p>
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-background-color="#503EEF"
+  data-transition="fade-out">
+  <img class="no-shadow full-height" src="images/yahoo_1994.gif">
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-transition="fade">
+  <div class="cs-browser-container">
+    <div class="cs-col">
+      <div class="cs-browser cs-nobar cs-browser-smaller">
+        <div class="cs-browser-inner">
+          <div class="cs-browser-menu">
+            <div class="cs-browser-ac">
+              <span></span>
+            </div>
+          </div>
+          <div class="cs-browser-content">
+            <div class="cs-browser-content-inner">
+              <img src="images/cssconfar.jpg" alt="xapo Wallet">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-col">
+      <div class="cs-browser cs-nobar cs-browser-smaller">
+        <div class="cs-browser-inner">
+          <div class="cs-browser-menu">
+            <div class="cs-browser-ac">
+              <span></span>
+            </div>
+          </div>
+          <div class="cs-browser-content">
+            <div class="cs-browser-content-inner">
+              <img src="images/foxsports.jpg" alt="xapo Wallet">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-col">
+      <div class="cs-browser cs-nobar cs-browser-smaller">
+        <div class="cs-browser-inner">
+          <div class="cs-browser-menu">
+            <div class="cs-browser-ac">
+              <span></span>
+            </div>
+          </div>
+          <div class="cs-browser-content">
+            <div class="cs-browser-content-inner">
+              <img src="images/xapo.jpg" alt="xapo Wallet">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    We all want to create some great sites, or even webapps. Each project has it's own challenges and everytime you learn something new.</br>
+    But when things starts to get "huge" or unmantainable is when we start hatin' CSS.
+  </aside>
+</section>
+      <section
+  data-background-color="#503EEF"
+  data-transition="slide">
+
+  <h3 class="h1">Selectors</h3>
+  <pre>
+    <code class="language-css h2" data-trim data-noescape>
+h1 {
+  
+}
+    </code>
+  </pre>
+
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-background-color="#503EEF"
+  data-transition="slide">
+
+  <h3 class="h1">Properties</h3>
+  <pre>
+    <code class="language-css h2" data-trim data-noescape>
+h1 {
+  color: #503EEF;
+  text-transform: uppercase;
+}
+    </code>
+  </pre>
+
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-background-color="#503EEF"
+  data-transition="slide">
+
+  <h3 class="emoji-big">💣</h3>
+  <pre>
+    <code class="language-css no-height h2" data-trim data-noescape>
+h1 {
+  color: #503EEF;
+  text-transform: uppercase;
+}
+#nav ul li {
+  float: left;
+}
+.dontUPPER {
+  text-transform: none !important;
+}
+.red {
+  color: red;
+}
+header li.red.otherRed {
+  color: #CD1203;
+}
+.hide {
+  display: none !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+    </code>
+  </pre>
+
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-background-image="images/gilfoyle-danish.gif"
+  data-background-repeat="repeat">
+  <aside class="notes">
+    So? What can we do to get better?
+  </aside>
+</section>
+
+      <section
+  data-transition="slide">
+  <h1 class="h0 text-uppercase c-purple">Communication</h1>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+  <h4 class="h1 text-uppercase c-purple">Product Owners</h4>
+  <h4 class="h1 text-uppercase c-purple">Designers️</h4>
+  <h4 class="h1 text-uppercase c-purple">Developers</h4>
+  <h4 class="fragment emoji-big">♥️</h4>
+
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+  <h4 class="h1 text-uppercase c-purple">Understanding Structure</h4>
+  <h4 class="h1 text-uppercase c-purple">Target Browsers</h4>
+  <h4 class="h1 text-uppercase c-purple">Devices &amp; Resolutions</h4>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+  <img class="no-shadow" src="images/wireframe.jpg">
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+  <div class="side-by-side">
+    <img class="no-shadow" src="images/analytics_1.jpg">
+    <img class="no-shadow" src="images/analytics_2.jpg">
+  </div>
+  <div class="side-by-side margin-top">
+    <p class="h3">Browsers</p>
+    <p class="h3">Resolutions</p>
+  </div>
+
+  <aside class="notes">
+
+  </aside>
+</section>
+
+      <section
+  data-transition="slide">
+  <h1 class="h0 text-uppercase c-purple">Dynamic</h1>
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+  <iframe class="demo-iframe" src="example_btn_1.html"></iframe>
+  <iframe class="demo-iframe" src="example_btn_2.html"></iframe>
+  <script type="text/javascript">
+    setInterval(function() {
+      $('.demo-iframe').toggleClass('small');
+    }, 4000);
+  </script>
+
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+  <h1 class="h1 text-uppercase c-purple">Mobile First 📱</h1>
+<pre>
+<code class="language-scss no-height h2" data-trim data-noescape>
+.btn {
+
+  /* Mobile */
+
+  ...
+
+  @media screen and (min-width: 320px) {
+    /* Tablet */
+    ...
+  }
+
+  @media screen and (min-width: 768px) {
+    /* Desktop */
+    ...
+  }
+}
+</code>
+</pre>
+
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+  
+  <div id="slide-dynamic-3-demo-css" class="margin-center text-center">
+    <div class="margin-center text-center">
+      <button class="btn btn-purple" href="#" target="_blank">I'm a Button</button>
+    </div>
+    <div id="slide-dynamic-3-demo-html" class="margin-center text-center">
+    </div>
+  </div>
+
+<pre>
+  <code class="liveCoding h2 language-html" data-livecoding-id="slide-dynamic-3-demo-html" data-trim contenteditable>
+<button class="btn" href="#" target="_blank">
+  I'm a Button
+</button>
+  </code>
+</pre>
+
+<pre>
+<code class="liveCoding h2 language-css" data-livecoding-id="slide-dynamic-3-demo-css" data-trim contenteditable>
+.btn {
+
+}
+</code>
+</pre>
+
+  <aside class="notes">
+  </aside>
+</section>
+      
+      <section
+  data-transition="slide">
+  <h1 class="h0 text-uppercase c-purple">Structure</h1>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+  <!-- <div class="margin-center text-center">
+    <button class="btn btn-purple" href="#" target="_blank">I'm a Button</button>
+  </div> -->
+
+  <h5 class="h3">styles.scss</h5>
+  <pre>
+    <code class="language-scss no-height h3" data-trim data-noescape>
+@import "vars";
+@import "btn";
+    </code>
+  </pre>
+
+  <h5 class="h3">_vars.scss</h5>
+  <pre>
+    <code class="language-scss no-height h3" data-trim data-noescape>
+$purple: #503EEF;
+$btn-size: 40px;
+    </code>
+  </pre>
+
+  <h5 class="h3">_btn.scss</h5>
+  <pre>
+    <code class="language-scss no-height h3" data-trim data-noescape>
+.btn {
+  font-size: $btn-size/2;
+  border-radius: $btn-size;
+  line-height: $btn-size;
+  &.btn-purple {
+    border: 3px solid $purple;
+    color: $purple;
+  }
+}
+    </code>
+  </pre>
+
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+<pre>
+<code class="language-xml no-height h2" data-trim data-noescape>
+├── <span class="c-purple text-bold">fonts</span>
+│   └── ...
+├── <span class="c-purple text-bold">images</span>
+│   └── ...
+└── <span class="c-purple text-bold">styles</span>
+    ├── <span class="c-orange text-bold">base</span>
+    │   ├── _base.scss
+    │   ├── _fonts.scss
+    │   ├── _text.scss
+    │   └── _vars.scss
+    ├── <span class="c-orange text-bold">layout</span>
+    │   ├── _footer.scss
+    │   ├── _header.scss 
+    │   └── ...
+    ├── styles.scss
+    ├── <span class="c-orange text-bold">modules</span>
+    │   ├── _btn.scss
+    │   └── ...
+    └── <span class="c-orange text-bold">util</span>
+        └── mixins.scss
+</code>
+</pre>
+
+  <aside class="notes">
+
+  </aside>
+</section>
+
+      <section
+  data-transition="slide">
+  <h3 class="h0 text-uppercase c-purple">Rule your project</h3>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+  <h4 class="h0 text-uppercase c-purple">"C" for <span class="text-block c-black">Cascade</span></h4>
+  <h4 class="fragment fade-in emoji-big">👀</h4>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+<pre>
+<code class="language-css no-height h1" data-trim data-noescape>
+header.main-header nav > ul > li > ul > li a {
+  text-decoration: none;
+}
+</code>
+</pre>
+
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-background-image="images/facepalm.gif">
+
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+  <div>
+  <h1 class="h0 text-uppercase c-purple">Selectors &amp; Naming</h1>
+  <ul>
+  </ul>
+  <aside class="notes">
+
+  </aside>
+</section>
+
+      <section>
+  <h3 class="h0 text-uppercase c-purple">SMACSS</h3>
+  <h3 class="h0 text-uppercase c-purple">BEM</h3>
+  <h3 class="h0 text-uppercase c-purple">OOCSS</h3>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-background-color="#1C292B">
+  <img style="width: 100%;" src="images/colorVars.gif">
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section>
+  <h3 class="h0 text-uppercase c-purple">Tooling Helps</h3>
+  <aside class="notes">
+
+  </aside>
+</section>
+      
+      <section
+  data-transition="slide">
+  <h3 class="h1 text-uppercase c-purple">Important</h3>
+  <h3 class="h1 fragment fade-in text-uppercase c-purple">Don't use <span class="text-block c-black">!important</span></h3>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+  <h3 class="h1 text-uppercase c-purple"><span class="text-block c-black">#AVOIDUSINGIDS</span></h3>
+  <h4 class="h1">Think in <span class="text-block c-black">Modules</span></h4>
+  <aside class="notes">
+
+  </aside>
+</section>
+
+
+      
+      <section
+  data-transition="slide">
+
+  <div class="side-by-side">
+      <div class="card">
+          <div class="card-image">
+              <img class="img-responsive" src="images/london.jpg">
+              <span class="card-title">Top things to do in London</span>
+          </div>
+          
+          <div class="card-content">
+              <p>London is a treasure trove of brilliant activities and days out worth boasting about. We're completely spoilt for choice with things to do in London, whether you live and work in the capital or you’re planning a holiday, there's loads of ways to fill a free day with fun.</p>
+          </div>
+      </div>
+
+      <div class="related" style="margin-top: -60px;">
+        <h4>Related Articles</h4>
+        <div class="card">
+          <div class="card-image">
+              <img class="img-responsive" src="images/london.jpg">
+              <span class="card-title">Top things to do in London</span>
+          </div>
+          
+          <div class="card-content">
+              <p>London is a treasure trove of brilliant activities and days out worth boasting about. We're completely spoilt for choice with things to do in London, whether you live and work in the capital or you’re planning a holiday, there's loads of ways to fill a free day with fun.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+              <img class="img-responsive" src="images/paris.jpg">
+              <span class="card-title">Top things to do in Paris</span>
+          </div>
+          
+          <div class="card-content">
+              <p>Notre Dame and the Eiffel Tower have been described countless times, as have the Seine and the subtle (and not-so-subtle) differences between the Left and Right Banks.</p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+  <div class="side-by-side">
+    <div>
+      <div class="card">
+          <div class="card-image">
+              <img class="img-responsive" src="images/london.jpg">
+              <span class="card-title">Top things to do in London</span>
+          </div>
+          
+          <div class="card-content">
+              <p>London is a treasure trove of brilliant activities and days out worth boasting about. We're completely spoilt for choice with things to do in London, whether you live and work in the capital or you’re planning a holiday, there's loads of ways to fill a free day with fun.</p>
+          </div>
+      </div>
+
+      <div class="related">
+        <div class="card">
+          <div class="card-image">
+              <img class="img-responsive" src="images/london.jpg">
+              <span class="card-title">Top things to do in London</span>
+          </div>
+          
+          <div class="card-content">
+              <p>London is a treasure trove of brilliant activities and days out worth boasting about. We're completely spoilt for choice with things to do in London, whether you live and work in the capital or you’re planning a holiday, there's loads of ways to fill a free day with fun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>
+      <code class="language-scss no-height h1" data-trim data-noescape>
+/* _card.scss */
+.card {
+  ...
+  img {
+    ...
+  }
+  h3 {
+    ...
+  }
+  .content {
+    ...
+  }
+}
+/* _related.scss */
+.related {
+  .card {
+    ...
+  }
+}
+      </code>
+    </pre>
+
+  </div>
+
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-transition="slide">
+
+  <div class="side-by-side">
+    <div>
+      <div class="card">
+          <div class="card-image">
+              <img class="img-responsive" src="images/london.jpg">
+              <span class="card-title">Top things to do in London</span>
+          </div>
+          
+          <div class="card-content">
+              <p>London is a treasure trove of brilliant activities and days out worth boasting about. We're completely spoilt for choice with things to do in London, whether you live and work in the capital or you’re planning a holiday, there's loads of ways to fill a free day with fun.</p>
+          </div>
+      </div>
+
+      <div class="related">
+        <div class="card">
+          <div class="card-image">
+              <img class="img-responsive" src="images/london.jpg">
+              <span class="card-title">Top things to do in London</span>
+          </div>
+          
+          <div class="card-content">
+              <p>London is a treasure trove of brilliant activities and days out worth boasting about. We're completely spoilt for choice with things to do in London, whether you live and work in the capital or you’re planning a holiday, there's loads of ways to fill a free day with fun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>
+      <code class="language-scss no-height h1" data-trim data-noescape>
+/* _card.scss */
+.card {
+  ...
+
+  .related & {
+    ...
+  }
+}
+.card-image {
+  ...
+}
+.card-title {
+  ...
+}
+.card-content {
+  ...
+}
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+
+  </aside>
+</section>
+
+       <section
+  data-transition="slide">
+  <h5 class="h1 fragment text-uppercase c-purple">Learn from your code</h5>
+  <h5 class="h1 fragment text-uppercase c-purple">Peer Review</h5>
+  <aside class="notes">
+
+  </aside>
+</section>
+      <section
+  data-background-color="#000"
+  data-background-video="images/1ArCd-bVHTrWMpWW.mp4">
+
+ </section>
+
+      
+      <section
+  data-background-color="#FFF"
+  data-transition="slide">
+  <div class="css-awesome">CSS IS AWESOME</div>
+  <aside class="notes">
+  </aside>
+</section>
+      <section
+  data-background-color="#FFF"
+  data-transition="slide">
+  <h3 class="h1">Got Hacks?</h3>
+  <pre>
+    <code class="language-css h2" data-trim data-noescape>
+.animation {
+  /* Little hack for better rendering */
+  transform: translateZ(0);
+}
+    </code>
+  </pre>
+  <pre>
+    <code class="language-css h2" data-trim data-noescape>
+/* Fixes strange issue with image sizing in IE */
+_:-ms-fullscreen, :root .content image {
+  min-height: 100%;
+}
+    </code>
+  </pre>
+  <aside class="notes">
+  </aside>
+</section>
+
+
+
+      <section
+  data-background-color="#503EEF">
+  <h5 class="h0">Thank you!</h5>
+  <h5 class="emoji-big">☕ ||️ 🍺</h5>
+  <p class="h3"><i class="icon-twitter"></i>@Blunk <i class="icon-github"></i>sbehrends</p>
+  <aside class="notes">
+
+  </aside>
+</section>
+    </div>
+  </div>
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      history: true,
+      controls: false,
+      width: 1440,
+      height: 900,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: 'reveal.js/plugin/markdown/marked.js' },
+        { src: 'reveal.js/plugin/markdown/markdown.js' },
+        { src: 'reveal.js/plugin/notes/notes.js', async: true },
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'js/plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }}
+      ]
+    });
+  </script>
+  </body>
+  </html>
