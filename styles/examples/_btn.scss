@@ -1,0 +1,70 @@
+
+/*
+  <a class="btn btn-yellow" href="#" target="_blank">I'm a Button</a>
+*/
+.demo-iframe {
+  width: 600px;
+  transition: width 4s;
+  display: block;
+  margin: 0 auto;
+  border-left: 10px solid $white;
+  border-right: 10px solid $white;
+  &.small {
+    width: 320px;
+  }
+}
+
+.btn {
+
+  $btn-size: 40px;
+
+  display: inline-block;
+  font-size: $btn-size/2;
+  box-sizing: border-box;
+  border-radius: $btn-size;
+  line-height: $btn-size;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 420px) {
+    width: inherit;
+  }
+
+  background: transparent;
+  border: 3px solid $purple;
+  color: $purple;
+  text-decoration: none;
+
+  &:hover, &.hover {
+    background-color: $purple;
+    color: $white;
+  }
+
+  &.btn-black {
+    background: $black;
+    color: $white;
+    text-decoration: none;
+
+    &:hover, &.hover {
+      background-color: darken($black, 5%);
+    }
+  }
+  
+  &.btn-yellow {
+    background: transparent;
+    border: 3px solid $yellow;
+    color: $black;
+    text-decoration: none;
+
+    &:hover, &.hover {
+      background-color: $yellow;
+      color: $white;
+    }
+  }
+}

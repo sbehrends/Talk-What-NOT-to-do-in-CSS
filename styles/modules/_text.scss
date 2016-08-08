@@ -1,0 +1,93 @@
+h1 {
+  text-transform: initial;
+}
+
+.h-1 {
+  font-size: 5em;
+}
+
+.h0 {
+  font-size: 3em;
+}
+
+.h1 {
+  font-size: 2em;
+}
+
+.h2 {
+  font-size: 1.5em;
+}
+
+.h3 {
+  font-size: 1.2em;
+}
+
+.h-1,
+.h0,
+.h1,
+.h2,
+.h3 {
+  line-height: 100%;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.emoji-big {
+  // Max available size
+  font-size: 128px;
+}
+
+.underline {
+  position: relative;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    top: 85%;
+    left: 0;
+    right: 0;
+    border-bottom: solid 0.1em $red;
+  }
+}
+
+.text-block {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 0 0.1em;
+
+  &.c-red {
+    background: white;
+    color: $red;
+  }
+
+  &.c-black {
+    background: black;
+    color: white;
+  }
+
+  &.c-purple {
+    background: white;
+    color: $purple;
+  }
+  &.c-purple-invert {
+    background: $purple;
+    color: white;
+  }
+}
